@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <h2>AI kita nih bro</h2>
+        </div>
+        
+        <button class="new-chat-btn" onclick="startNewChat()">
+            New Chat
+        </button>
+        
+        <div class="history-section">
+            <h3>Chat History</h3>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <button class="toggle-sidebar-btn" id="toggleBtn" onclick="toggleSidebar()">
+            ☰
+        </button>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="welcome-screen" id="welcomeScreen">
+                <h1>👋 How can i assist you?</h1>
+                <p>Start a conversation by typing your message below...</p>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Ask anything..." 
+                    onkeypress="handleKeyPress(event)"
+                />
+                <button class="send-btn" onclick="sendMessage()" id="sendBtn">
+                    ►
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="gatau.js"></script>
+  </body>
+</html>
